@@ -1,0 +1,27 @@
+<br>
+<br>
+<center>
+<h1>All Lists</h1>
+
+<table >
+  <thead>
+    <tr>
+      <th>List Names</th>
+      <th>----Link</th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lists.each do |list| %>
+    <tr>
+      <td><%= list.name %></td>
+      <td>----<%= link_to 'View List', list_path(list)%>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Create New List', new_list_path %>
+
+</center>
